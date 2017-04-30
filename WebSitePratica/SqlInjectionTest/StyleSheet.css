@@ -1,0 +1,56 @@
+﻿body {    
+      font-family:Helvetica Neue, Arial, sans-serif;
+      background-image:url(Images/background.png);
+	  background-color:#1f1e1a;
+      background-repeat:repeat;
+}
+
+.centralizar{	
+	display: table;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+input[type=submit], input[type=button] {
+    background-color:black;
+    /*border-radius:5px;*/
+    color:lightblue;
+    font: 20px arial, sans-serif;
+    margin-right:20px;
+    padding:5px 10px 5px 10px;
+}
+
+input[type=submit]:hover, input[type=button]:hover{
+    color:deepskyblue;
+    transition: 0.5s;
+}
+
+input[type=text] {
+    background-color:black;
+    color:yellow;
+    font: 20px 'Courier New', arial, sans-serif;
+    padding:5px;
+    margin-bottom:10px;
+}
+
+fieldset {
+    padding:20px;
+    width:400px;
+}
+    
+    fieldset legend, span, h2 {
+        color:white;
+    }
+
+    fieldset input[type=text] {
+        width:400px;
+    }
+
+.txtSearch {
+    width:98%;
+}
+
+table{
+    color:white;
+
+}
